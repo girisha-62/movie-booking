@@ -1,0 +1,39 @@
+<html>
+    <head>
+        <title>Registration Form for Ticket Booking</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <Body class="regBody">
+        <h1>Register for Booking Tickets</h1>
+        <form id="registration-form" method="POST" action="">
+            <div>
+              <label for="reg-id">Registration ID *</label>
+              <input type="text" id="reg-id" name="reg-id" placeholder="Enter Registration ID" required pattern="^[0-9A-Z]{8}$" title="Registration ID should be in the format 23WP0001">
+            </div>
+            <div>
+              <label for="username">Username *</label>
+              <input type="text" id="username" name="username" placeholder="Enter Username" required pattern="^[a-zA-Z]+$" title="Username should not have any digits">
+            </div>
+            <div>
+              <label for="password">Password *</label>
+              <input type="password" id="password" name="password" placeholder="Enter Password" required pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z0-9]).{8,}$" title="Password should have at least one small case letter, one uppercase letter, one digit, one special character, and be at least 8 characters long">
+            </div>
+            <div>
+              <label for="email">Email *</label>
+              <input type="email" id="email" name="email" placeholder="Enter Email" required>
+            </div>
+            <div>
+              <label for="mobile-number">Mobile Number *</label>
+              <input type="tel" id="mobile-number" name="mobile-number" placeholder="Enter Mobile Number" required pattern="^[0-9]{10}$" title="Mobile number should be exactly 10 digits and not entered like (0000000000)">
+            </div>
+            <div>
+              <label for="dob">Date of Birth *</label>
+              <input type="date" id="dob" name="dob" placeholder="DD/MM/YYYY" required>
+            </div>
+            <div class="buttons">
+              <button type="submit" class="button">Submit</button>
+              <button type="reset" class="button">Cancel</button>
+            </div>
+          </form>
+    </Body>
+</html>
